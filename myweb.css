@@ -1,0 +1,43 @@
+#header {text-align: center; vertical-align:middle; position:fixed; width:100%;z-index:3;background-color:white; height: 50px}
+#sticon {margin-top: 8px; margin-left: 8px ; vertical-align:middle; float: left}
+#header span.headerCA img {height: 7px; width: 5px}
+
+#myCtrId {margin: 0; padding: 0}
+#mainbody {height: 100%; width: 100%; margin: 0; margin-top: 50px;}
+#navId {margin: 0; padding: 0;background-color:#333333; height:100%}
+#contentId {background-color:#f2f2f2; margin: 0}
+#legimain {background-color: white}
+#billmain {background-color: white}
+#commmain {background-color: white}
+#favomain {background-color: white}
+#legiContTab {margin: 6px 6px 6px 6px;}
+#billContTab {margin: 6px 6px 6px 6px;}
+#commContTab {margin: 6px 6px 6px 6px;}
+#favoContTab {margin: 6px 6px 6px 6px;}
+#legiContent {margin: 0; padding: 0}
+#billContent {margin: 0; padding: 0}
+#commContent {margin: 0; padding: 0}
+#favoContent {margin: 0; padding: 0}
+
+#legiDetail {background-color: white}
+#billDetail {background-color: white;  border-bottom-style: none;}
+
+div.legiHead {margin-bottom: 18px; border-bottom-style: solid;border-bottom-width: 1px; border-bottom-color:#cccccc}
+
+#legiStar {color: white; font-size:1.5em;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: #c5c5c5;}
+#billStar {color: white;font-size:1.5em;-webkit-text-stroke-width: 1px;-webkit-text-stroke-color: #c5c5c5;}
+
+img.smallimg {width: 21px}
+img.bigimg {width:160px}
+
+#legimain img {width: 21px}
+#orimg {width: 100%}
+#panHead {display: inline-block; text-align: right; width: 100%; background: inherit}
+#barText {float:left}
+
+ul.navbar { margin: 0; padding: 0; list-style-type: none; overflow: hidden; border-radius: 5px; height: 100%;}
+li.navitem {margin-top: 20px ; margin-left: 4px; padding: 0; font-family: trebuchet MS; text-align: center}
+li.navitem a:link, a:visited {text-decoration: none}
+
+div.panel-heading{overflow: scroll}
+div.panel-body {overflow: scroll}

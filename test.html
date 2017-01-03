@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="myweb.css">
+    <link data-require="bootstrap-css@3.1.1" data-semver="3.1.1" rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+  <script data-require="angular.js@1.3.0" data-semver="1.3.0" src="https://code.angularjs.org/1.3.0/angular.js"></script>
+  <script data-require="jquery@*" data-semver="2.0.3" src="http://code.jquery.com/jquery-2.0.3.min.js"></script>
+  <script data-require="bootstrap@3.1.1" data-semver="3.1.1" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+
+ <script src="script.js"></script>
+  <script src="dirPagination.js"></script>
+</head>
+<body>
+    <div class="container">
+    <div class="header">
+    <span id="sticon" class="glyphicon glyphicon-menu-hamburger" style="float:left" ></span>
+    <span class="headCA"><a target="_blank" href="http://sunlightfoundation.com/"><img src="logo.png"></a><font size="6">Congress API</font></span>
+    </div>
+    <div class="row">
+    <div id="navId" class="col-sx-4">
+    <ul class="navbar">
+        <li id="LegsId" class="navitem"><a href="#"><span class="glyphicon glyphicon-user"></span> Legislators</a></li>
+        <li id="BillId" class="navitem"><a href="#"><span class="glyphicon glyphicon-file"></span> Bills</a></li>
+        <li id="CommId" class="navitem"><a href="#"><span class="glyphicon glyphicon-log-in"></span> Committees</a></li>
+        <li id="FavoId" class="navitem"><a href="#"><span class="glyphicon glyphicon-star"></span> Favorites</a></li>
+    </ul>
+    </div>
+    <div id="contentId" class="col-sx-8">
+        <div id="legiContent">
+            <h1 id="h1">Legislators</h1>
+            <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active"><a href="#state" aria-controls="state" role="tab" data-toggle="tab">By state</a></li>
+                <li role="presentation"><a a href="#house" aria-controls="house" role="tab"  data-toggle="tab">House</a></li>
+                <li role="presentation"><a a href="#senate" aria-controls="senate" role="tab"  data-toggle="tab">Senate</a></li>
+            </ul>
+            <div class="row">
+                <div ng-controller="MyController" class="my-controller">
+                <ul>
+                  <li dir-paginate="meal in meals | filter:q | itemsPerPage: pageSize" current-page="currentPage" pagination-id="legisPagination">{{ meal }}</li>
+                </ul>
+                <div class="text-center">
+                    <dir-pagination-controls boundary-links="true" pagination-id="legisPagination" on-page-change="pageChangeHandler(newPageNumber)" template-url="dirPagination.tpl.html"></dir-pagination-controls>    
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+</body>
+</html>
+
+<script>
+$("#sticon").click(function() {
+    $("#navId").toggle();
+});
+
+$("#LegsId").click(function() {
+    $("#h1").html("Legislators");
+});
+
+$("#BillId").click(function() {
+    $("#h1").html("Bills");
+});
+
+$("#CommId").click(function() {
+    $("#h1").html("Committees");
+});
+
+$("#FavoId").click(function() {
+    $("#h1").html("Favorites");
+});
+</script>
+
+<script>
+
+    
+
+</script>
